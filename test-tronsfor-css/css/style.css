@@ -1,0 +1,86 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#logo{
+	height: 90px;
+	width: 90px;
+	float: left;
+}
+.t1{
+	float: right;
+}
+.menu{
+	height: 90px;
+	width: 100%;
+	background: red;
+	position: fixed;
+	z-index: 99;
+}
+.men{
+	color: blue;
+	font-size: 25px;
+	display: inline-block;
+	margin: 20PX;
+}
+.s{
+	float: left;
+}
+
+.box1,.box2{
+	margin: 0 auto;
+	width: 800px;
+	height: 500px;
+	top:120px;
+	border:2px solid #000;
+	position: relative;
+}
+.box1{
+	background: #F8E30D;
+}
+
+.bx1, .bx2, .bx3, .bx4 {
+	width: 200px;
+	height: 150px;
+	position: absolute;	
+}
+.bx1{
+	background: blue;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+.bx2{
+	background: #f3d;
+	left: 0px;
+	top: 0px;
+}
+.bx1:hover ~ .bx2{
+	background: #f3d;
+	left: 30px;
+	top: 30px;
+	z-index: 2;
+}
+.bx3{
+	background: #eee;
+	left: 0px;
+	top: 0px;
+}
+.bx1:hover ~ .bx3{
+	background: #eee;
+	left: 60px;
+	top: 60px;
+	z-index: 3;
+}
+.bx4{
+	background: green;
+	left: 0px;
+	top: 0px;
+	
+}
+.bx1:hover ~ .bx4{
+	background: #000;
+	left: 90px;
+	top: 90px;
+	z-index: 4;
+}
