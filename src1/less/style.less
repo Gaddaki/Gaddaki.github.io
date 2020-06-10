@@ -1,0 +1,263 @@
+// Fonts
+@font-face {
+    font-family: 'ProximaNova_bold';
+    src: url('../fonts/ProximaNovaCond-Bold.eot');
+    src: url('../fonts/ProximaNovaCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNovaCond-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNovaCond-Bold.woff') format('woff'),
+        url('../fonts/ProximaNovaCond-Bold.ttf') format('truetype'),
+        url('../fonts/ProximaNovaCond-Bold.svg#ProximaNovaCond-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova_reg';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.reg(){
+	font-family: 'ProximaNova_reg', sans-serif;
+}
+.bold(){
+	font-family: sans-serif;
+	 font-weight:700;
+}
+
+// Базывые цвета
+@btn-color: #f8af01;
+@icons-color: #70c849;
+@text: #1a1820;
+@denger: #ff0000;
+@bg-light: #f5f5f5;
+@light: #fff;
+@border-input:#dddddd;
+
+// Базовые настройки
+html{
+	font-size: 10px;
+}
+body{
+	.reg();
+}
+a:hover{
+	text-decoration: none;
+}
+input, button, a{
+	&:focus{
+		outline: none;
+	}
+}
+.button{
+	padding: 1rem 3rem;
+	border-radius: 8px;
+	font-size: 1.2rem;
+	background-color: @btn-color;
+	color: @light;
+	text-transform: uppercase;
+	border:none;
+	transition: all 0.4s;
+		&:hover{
+			cursor: pointer;
+			background-color: darken(@btn-color, 5%);
+		}
+}
+// Заголовки	
+section{
+	padding: 10rem 0;
+}
+
+// main
+
+.main{
+	padding: 4rem 0 8rem;
+	background: #fff url(../img/header-fon.png) center center no-repeat;
+	background-size: cover;
+	&-con{
+		margin-top: 10rem;
+		// Левая форма
+		h1{
+			margin-top: 0;
+			margin-bottom: 5rem;
+			.bold();
+			font-size: 4rem;
+			line-height: 1.45;
+			text-transform: uppercase;
+		}
+	}
+	&-subtitel{
+		margin-bottom: 5rem;
+		font-size: 2.4rem;
+	}
+	span{
+		display: inline-block;
+		padding: 3rem 5rem;
+		font-size: 1.8rem;
+		color: @light;
+		background-color: @icons-color;
+		text-align: center;
+		strong{
+			font-size: 3rem;
+			.bold();
+		}
+	}
+	&-triger{
+		display: block;
+		margin-top: 3.7rem;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+	}
+	// правая форма
+	&-form{
+		padding: 4rem 5rem;
+		background-color:@light;
+		text-align: center;
+		&-header{
+			margin-bottom: 4rem;
+			font-size: 1.8rem;
+			strong{
+				font-size: 1.9rem;
+			}
+		}
+		&-input{
+			display: block;
+			border:1px solid @border-input;
+			margin: 2rem 0;
+			width: 100%;
+			padding: 1.5em;
+		}
+		lable{
+			position: absolute;
+			left: 50%;
+
+			transform: translateX(-50%) translateY(-50%);
+			padding: 0.5em;
+			background-color: @light;
+		}
+		&-btn{
+			display: block;
+			width: 100%;
+			height: 5.5rem;
+			font-size: 1.6rem;
+		}
+		small{
+			display: block;
+			margin-top: 1.5rem;
+		}
+	}
+}
+.header{
+	height: 7rem;
+}
+.phone-blok{
+	text-align: right;
+}
+.phone-link{
+	display: inline-block;
+	.bold();
+	font-size: 2rem;
+	height: 7rem;
+	line-height: 7rem;
+	color: @text;
+}
+.wrap{
+	display: table;
+	width: 100%;
+	height: 7rem;
+	&-block{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: right;
+	}
+}
+
+.section-header{
+	margin:2rem 0 10rem;
+	.bold();
+	font-size: 3.6rem;
+	text-align: center;
+}
+
+// Оформление секция с преймушеством
+
+.features{
+
+	&-block{
+		text-align: center;
+	}
+	h3{
+		.bold();
+		font-size: 2rem;
+		margin-bottom: 3rem;
+	}
+	p{
+		display: inline-block;
+		width: 80%;
+		font-size: 1.4rem;
+	}
+	// img стало други и мы в img ищем img
+	&-img {
+		height: 8rem;
+		margin-bottom: 3rem;
+		img{
+			display: block;
+			margin: 0 auto;
+		}	
+	}
+}
+.slick-active{
+	// убираем обводку на слайдере
+	outline:none;
+}
+.arrow {
+	position: absolute ;
+	z-index: 99;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	top: 50%;
+	transform: scaleY(-50%);
+}
+.prev{
+	background:url(../img/keyboard-righ.svg);
+	background-size: 70%;
+	left: 0;
+}
+.next{
+	background-size: 70%;
+	right: 0;
+}
+
+
+
+@media(max-width: 991px){
+	.main{
+		background-position: top right; 
+	}
+	.phone-blok{
+		text-align: center;
+	}
+	.main-con{
+	margin-top: 3rem;
+	}
+	.main-title{
+		padding-bottom: 3rem;
+		text-align: center;
+	}
+}
+@media(max-width: 767px){
+		.main{
+		background-position: top left; 
+	}
+	.header{
+		text-align: center;
+	}
+	.wrap-block{
+		text-align: center;
+	}
+}
